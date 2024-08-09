@@ -1,6 +1,5 @@
 let accounts = [];
 
-<<<<<<< HEAD
 // Función para crear una nueva cuenta
 function createAccount(usuario, contraseña) {
   // Verifica si ya existe una cuenta con el mismo nombre de usuario
@@ -55,37 +54,4 @@ function getAccounts() {
 }
 
 // Exporta las funciones para que puedan ser utilizadas en otros archivos
-=======
-function createAccount(usuario, contraseña) {
-  if (accounts.some(account => account.usuario === usuario)) {
-    return 'Account already exists';
-  }
-  accounts.push({ usuario, contraseña });
-  return 'Account created successfully';
-}
-
-function deleteAccount(usuario) {
-  const initialLength = accounts.length;
-  accounts = accounts.filter(account => account.usuario !== usuario);
-  return accounts.length < initialLength ? 'Account deleted successfully' : 'Account not found';
-}
-
-function login(usuario, contraseña) {
-  return accounts.some(account => account.usuario === usuario && account.contraseña === contraseña);
-}
-
-function updateAccount(usuario, nuevaContraseña) {
-  const account = accounts.find(account => account.usuario === usuario);
-  if (account) {
-    account.contraseña = nuevaContraseña;
-    return 'Account updated successfully';
-  }
-  return 'Account not found';
-}
-
-function getAccounts() {
-  return accounts;
-}
-
->>>>>>> 1ecd58c5451cd352fe307ed55576bace15517c13
 module.exports = { createAccount, deleteAccount, login, updateAccount, getAccounts };
