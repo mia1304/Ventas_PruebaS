@@ -15,3 +15,4 @@ function login(user, authenticateUser) {
 }
 
 module.exports = { login };
+
