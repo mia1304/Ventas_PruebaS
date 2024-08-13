@@ -1,5 +1,3 @@
-// src/envio.js
-
 function getShippingCost(destination) {
     if (destination === 'domestic') {
       return 5;
