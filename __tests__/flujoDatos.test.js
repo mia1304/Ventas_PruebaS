@@ -1,5 +1,3 @@
-// test/flujoDatos.test.js
-
 const { addProductToInventory, calculateInventoryValue } = require('../src/inventario');
 
 describe('Pruebas de flujos de datos', () => {
