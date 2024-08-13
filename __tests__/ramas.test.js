@@ -1,5 +1,3 @@
-// test/ramas.test.js
-
 const { getShippingCost } = require('../src/envio');
 
 describe('Pruebas de ramas condicionales', () => {
