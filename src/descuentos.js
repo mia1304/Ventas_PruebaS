@@ -1,5 +1,3 @@
-// src/descuentos.js
-
 function applyDiscount(product, discountCode) {
     if (discountCode && discountCode.isValid()) {
       product.price -= discountCode.value;
