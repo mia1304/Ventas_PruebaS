@@ -1,5 +1,3 @@
-// src/inventario.js
-
 function addProductToInventory(inventory, product) {
     inventory.push(product);
     return inventory;
