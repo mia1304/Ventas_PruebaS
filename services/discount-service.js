@@ -1,5 +1,3 @@
-// services/discount-service.js
-
 function applyDiscount(product, discountCode) {
     if (!discountCode) {
         throw new Error('Discount code is required');
