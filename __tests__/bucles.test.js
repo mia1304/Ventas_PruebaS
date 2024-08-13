@@ -1,3 +1,4 @@
+
 const { calculateTotal } = require('../src/carrito');
 
 describe('Pruebas de caja blanca para el carrito de ropa', () => {
