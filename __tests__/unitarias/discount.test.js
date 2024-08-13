@@ -1,5 +1,3 @@
-// test/unitarias/discount.test.js
-
 const { applyDiscount } = require('../../services/discount-service');
 
 describe('Pruebas de aplicación de descuentos', () => {
