@@ -1,6 +1,7 @@
 const { getShippingCost } = require('../src/envio');
 
 describe('Pruebas de ramas condicionales', () => {
+
   test('Debe retornar el costo de envío doméstico', () => {
     const result = getShippingCost('domestic');
     expect(result).toBe(5);
@@ -12,6 +13,7 @@ describe('Pruebas de ramas condicionales', () => {
   });
 
   test('Debe lanzar un error para un destino desconocido', () => {
-    expect(() => getShippingCost('unknown')).toThrow('Unknown destination');
+    expect(() => getShippingCost('unknown')).toThrow('Destino desconocido');
   });
+
 });
