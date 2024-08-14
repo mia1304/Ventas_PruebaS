@@ -1,8 +1,8 @@
-
 const { calculateTotal } = require('../src/carrito');
 
-describe('Pruebas de caja blanca para el carrito de ropa', () => {
-  test('Debe recorrer todo el array y calcular el total correctamente', () => {
+describe('Pruebas de caja blanca para el bucle en la función calculateTotal', () => {
+  
+  test('Debe recorrer el array completo y calcular el total correctamente', () => {
     const clothingItems = [
       { price: 50, quantity: 2 },  // Dos camisetas a $50 cada una
       { price: 30, quantity: 1 },  // Un pantalón a $30
@@ -15,12 +15,11 @@ describe('Pruebas de caja blanca para el carrito de ropa', () => {
 
     const result = calculateTotal(clothingItems);
 
-    // Verificar que el bucle se ejecutó la cantidad correcta de veces
+    // Verificar que el bucle se ejecuta la cantidad correcta de veces
     expect(clothingItems.length).toBe(2);
-    // Verificar el valor de la variable total en cada iteración
+    // Verificar el valor acumulado en total después del bucle
     expect(total).toBe(130);
-
-    // Finalmente, verificar el resultado
+    // Verificar que el resultado de la función es correcto
     expect(result).toBe(130);
   });
 
@@ -29,12 +28,13 @@ describe('Pruebas de caja blanca para el carrito de ropa', () => {
 
     const result = calculateTotal(clothingItems);
 
-    // Verificar que el bucle no se ejecutó
+    // Verificar que el bucle no se ejecuta
     expect(clothingItems.length).toBe(0);
+    // Verificar que el total es 0 cuando el array está vacío
     expect(result).toBe(0);
   });
 
-  test('Debe manejar correctamente un array con un solo elemento', () => {
+  test('Debe manejar un array con un solo elemento', () => {
     const clothingItems = [{ price: 100, quantity: 1 }];  // Una chaqueta a $100
 
     let total = 0;
@@ -44,12 +44,11 @@ describe('Pruebas de caja blanca para el carrito de ropa', () => {
 
     const result = calculateTotal(clothingItems);
 
-    // Verificar que el bucle se ejecutó una vez
+    // Verificar que el bucle se ejecuta una vez
     expect(clothingItems.length).toBe(1);
-    // Verificar el valor de la variable total después de la única iteración
+    // Verificar el valor acumulado en total después de la única iteración
     expect(total).toBe(100);
-
-    // Finalmente, verificar el resultado
+    // Verificar que el resultado de la función es correcto
     expect(result).toBe(100);
   });
 
@@ -68,8 +67,8 @@ describe('Pruebas de caja blanca para el carrito de ropa', () => {
 
     // Verificar el cálculo en cada iteración
     expect(total).toBe(60);
-
-    // Verificar el resultado final
+    // Verificar que el resultado de la función es correcto
     expect(result).toBe(60);
   });
+
 });
